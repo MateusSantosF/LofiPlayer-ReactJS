@@ -7,11 +7,19 @@ import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
 import Typography from '@mui/material/Typography';
 
+import { PlayerContext } from '../../Contexts/PlayerContext';
+import { useContext } from 'react';
 function LibraryCard({music}){
 
+   const {handlerSpecifSong} = useContext(PlayerContext)
+
+
+   function handlerSelectSong(){
+      handlerSpecifSong(music.id)
+   }
 
     return(
-      <Card sx={{ marginBottom:'1em' }}>
+      <Card sx={{ marginBottom:'1em' }} onClick={handlerSelectSong}>
         <CardActionArea sx={{ display: 'flex', width:'100%', justifyContent:'left'}}>
         <CardMedia
             component="img"
