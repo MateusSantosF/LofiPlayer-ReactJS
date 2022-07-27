@@ -10,10 +10,10 @@ function Navbar(){
 
     return(
         <Box sx={{display:'flex', justifyContent:'space-around', alignItems:'center'}}>       
-            <Box sx={{display:'flex', alignItems:'center', padding:'2em'}}>
-                <Typography variant="h5" component="h2" >
+            <Box >
+                <Typography variant="h5" component="h2" sx={{display:'flex', alignItems:'center', padding:'1em'}}>
                     Chill 
-                    <AlbumRoundedIcon/>
+                    <AlbumRoundedIcon fontSize="large"/>
                     MateusF
                 </Typography>
             </Box>   
