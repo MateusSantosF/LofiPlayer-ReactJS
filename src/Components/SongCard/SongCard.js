@@ -1,6 +1,6 @@
 
 import { Box } from "@mui/system";
-
+import { memo } from "react";
 function SongCard({cover}){
 
     return(
@@ -13,10 +13,10 @@ function SongCard({cover}){
             backgroundSize:'cover',
             padding:'0',
             margin:'0'
-            }}>                  
+            }}>                
         </Box>
 
     )
 }
 
-export default SongCard
+export default memo(SongCard)

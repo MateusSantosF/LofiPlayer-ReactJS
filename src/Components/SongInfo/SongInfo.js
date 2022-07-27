@@ -1,7 +1,7 @@
 
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
-
+import { memo } from "react";
 function SongInfo({title, artist}){
     
     return(
@@ -17,4 +17,4 @@ function SongInfo({title, artist}){
 
 }
 
-export default SongInfo
+export default memo(SongInfo)

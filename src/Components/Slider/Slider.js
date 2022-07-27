@@ -5,12 +5,13 @@ import { Box } from '@mui/material'
 import { PlayerContext } from '../../Contexts/PlayerContext'
 import { useContext } from 'react'
 
+
 function Slider({colors}){
 
     const {currentTime} = useContext(PlayerContext);
     
     return (
-        <Box sx={{display:'flex', justifyContent:'center'}}>
+        <Box sx={{display:'flex', justifyContent:'center', width:'50%'}}>
             <ReactSlider                 
                 className="horizontal-slider"
                 trackClassName="track"

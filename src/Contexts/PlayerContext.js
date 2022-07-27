@@ -25,6 +25,7 @@ function PlayerContextProvider({children}){
             setCurrentSongIndex(nextSong)
         }   
         setCurrentTime(0)
+
     }
 
  
@@ -47,7 +48,7 @@ function PlayerContextProvider({children}){
         let songIndex = playlist.indexOf(searchSong)
         setCurrentSong(searchSong)
         setCurrentSongIndex(songIndex)
-        setCurrentTime(0)
+        setCurrentTime(0)        
     }
 
     function handlerPlayPauseSong(){
