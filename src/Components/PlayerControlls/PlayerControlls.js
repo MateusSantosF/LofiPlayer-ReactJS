@@ -20,7 +20,6 @@ function PlayerControlls(){
                 <Slider
                     aria-label="musicTimer"
                     defaultValue={30}
-             
                     color="secondary"
                 />
                 <Box sx={{display:'flex', justifyContent:'space-around'}}>

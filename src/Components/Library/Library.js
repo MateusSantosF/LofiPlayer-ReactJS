@@ -18,9 +18,8 @@ function Library(){
     })
 
     return(
-        <> 
-        {isLibraryOpen &&
-    
+        <aside>
+        {isLibraryOpen &&       
             <Drawer open={isLibraryOpen} onClose={toggleLibraryOpen} >
                 <Box >     
                     <Box sx={{display:'flex', justifyContent:'flex-end', width:'94%'}}>
@@ -29,13 +28,12 @@ function Library(){
                         </Button>
                     </Box>
                 </Box>
-
                 <Box  sx={{display:'flex', flexDirection:'column', margin:'2em'}}>
                    {musics}
                 </Box>
-          </Drawer>                  
+          </Drawer>                   
         }
-        </>
+        </aside>   
     )
 }
 
