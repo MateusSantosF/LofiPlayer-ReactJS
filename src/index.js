@@ -4,13 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import AppProvider from './Contexts/AppContext';
+import PlayerContextProvider from './Contexts/PlayerContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <AppProvider>
-      <App />
-    </AppProvider>
+        <PlayerContextProvider>
+          <App />
+        </PlayerContextProvider>
+      </AppProvider> 
   </React.StrictMode>
 );
 
