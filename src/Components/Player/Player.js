@@ -9,12 +9,17 @@ import SongInfo from "../SongInfo/SongInfo";
 
 function Player(){
 
-    const {currentSong} = useContext(PlayerContext)
+    const {currentSong,audioRef,handlerCurrentTime,handlerSkipSong} = useContext(PlayerContext)
 
     return(   
         <Box sx={{ display:'flex',justifyContent:'center', alignItems:'center', flexDirection:'column'}}>       
             <SongCard cover={currentSong.cover}/>
-            <SongInfo title={currentSong.name} artist={currentSong.artist}/>            
+            <SongInfo title={currentSong.name} artist={currentSong.artist}/>     
+            <audio  ref={audioRef} 
+                    src={currentSong.audio} 
+                    onTimeUpdate={handlerCurrentTime}
+                    onEnded={handlerSkipSong}
+            />       
             <PlayerControlls/> 
         </Box>                  
     )

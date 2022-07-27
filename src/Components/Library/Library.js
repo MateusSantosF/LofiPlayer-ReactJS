@@ -1,9 +1,8 @@
-import { Box,IconButton , Button } from '@mui/material';
+import { Box , Button } from '@mui/material';
 import {AppContext} from '../../Contexts/AppContext'
 import { PlayerContext } from '../../Contexts/PlayerContext';
 import { useContext } from 'react';
 import { Drawer } from "@mui/material";
-import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import LibraryCard from '../LibraryCard/LibraryCard';
 
 function Library(){
