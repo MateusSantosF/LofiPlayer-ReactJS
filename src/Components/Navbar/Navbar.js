@@ -9,7 +9,7 @@ function Navbar(){
     const {toggleLibraryOpen} = useContext(AppContext)
 
     return(
-        <Box sx={{display:'flex', justifyContent:'space-around', alignItems:'center'}}>       
+        <Box sx={{display:'flex', justifyContent:'space-around', alignItems:'center', padding:'1em'}}>       
             <Box >
                 <Typography variant="h5" component="h2" sx={{display:'flex', alignItems:'center', padding:'1em'}}>
                     Chill 

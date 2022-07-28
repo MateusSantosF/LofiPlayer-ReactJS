@@ -6,8 +6,8 @@ function SongCard({cover}){
     return(
         <Box sx={{
             borderRadius:'50%',
-            width:'250px', 
-            height:'250px',
+            width:'20rem', 
+            height:'20rem',
             justifyContent:'center', 
             backgroundImage: 'url(' + cover+')',
             backgroundSize:'cover',

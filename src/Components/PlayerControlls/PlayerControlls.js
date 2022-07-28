@@ -18,7 +18,7 @@ function PlayerControlls(){
 
 
     return (
-            <Box sx={{display:'flex', justifyContent:'space-between', paddingTop:'1em', flexDirection:"column", width:'35%'}}>        
+            <Box sx={{display:'flex', justifyContent:'space-between', paddingTop:'1em', flexDirection:"column", width:{xs:'70%', md:'20%'}}}>        
                 <Box sx={{display:'flex', justifyContent:'space-around'}}>
                     <IconButton aria-label="Previous" sx={{color:'black'}} onClick={handlerPreviousSong}>
                         <SkipPreviousRoundedIcon fontSize="large"/>

@@ -8,22 +8,30 @@ import { useContext } from 'react'
 
 function Slider({colors}){
 
-    const {currentTime} = useContext(PlayerContext);
+    const {currentTime, audioRef} = useContext(PlayerContext);
+
+    function handlerSkipTime(e){
+        let newTime = (audioRef.current.currentTime *e)/ currentTime
+        audioRef.current.currentTime = newTime
+    }
     
     return (
-        <Box sx={{display:'flex', justifyContent:'center', width:'50%'}}>
+        <Box sx={{display:'flex', justifyContent:'center', width:{xs:'70%', md:'35%'}}}>
             <ReactSlider                 
                 className="horizontal-slider"
                 trackClassName="track"
-                renderThumb={() =>
-                     <div className='thumb' style={{
-                        width:currentTime+'%',              
+                value={currentTime}
+                onChange={handlerSkipTime}
+                renderThumb={(props,state) =>
+
+                     <div {...props} className='thumb' style={{
+                        width:state.valueNow+'%',              
                         backgroundImage:`linear-gradient(to right, ${colors[0]}, ${colors[1]})`
                      }}>
+
                     </div>
                 }
-            />
-            
+            />            
         </Box>
     )
 

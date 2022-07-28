@@ -8,6 +8,7 @@ export const PlayerContext = createContext()
 function PlayerContextProvider({children}){
 
     const playlist = chillHop();
+
     const [currentSong, setCurrentSong] = useState(playlist[0])
     const [currentTime, setCurrentTime] = useState(0)
     const [currentSongIndex, setCurrentSongIndex] = useState(0)
@@ -16,6 +17,7 @@ function PlayerContextProvider({children}){
     
     function handlerSkipSong(){
         let nextSong = currentSongIndex + 1 
+
 
         if(nextSong >= playlist.length){
             setCurrentSong(playlist[0])
@@ -32,7 +34,8 @@ function PlayerContextProvider({children}){
    
     function handlerPreviousSong(){
         let nextSong = currentSongIndex - 1 
-        if(nextSong <= 0){
+  
+        if(nextSong < 0){
             setCurrentSong(playlist[playlist.length-1])
             setCurrentSongIndex(playlist.length-1)
         }else{
