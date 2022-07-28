@@ -11,14 +11,11 @@ function Slider({colors}){
     const {currentTime, audioRef, isPlaying} = useContext(PlayerContext);
 
     function handlerSkipTime(e){
-    
-        if(currentTime === 0){
-            let newTime = (audioRef.current.duration *e)/ 100
-            audioRef.current.currentTime = newTime
-            return
+        
+        if(currentTime > 0 ){
+            let newTime = (audioRef.current.currentTime * e)/currentTime;
+            audioRef.current.currentTime = newTime;
         }
-        let newTime = (audioRef.current.currentTime *e)/ currentTime
-        audioRef.current.currentTime = newTime
     }
     
     return (
