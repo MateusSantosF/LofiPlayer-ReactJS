@@ -25,7 +25,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
- LofiPlayer in React é um projeto de aprendizado, objetivando compreender o básico do desenvolvimento com o ReactJS e a biblioteca MUI.
+ LofiPlayer in React é um projeto de aprendizagem, objetivando compreender o básico do desenvolvimento com o ReactJS e a biblioteca MUI.
 
 ## 📚 Aprendizados
 
